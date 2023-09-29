@@ -29,7 +29,6 @@
 </head>
 
 <body>
-  <capacitor-welcome>
     <nav>
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Logo</a>
@@ -50,37 +49,35 @@
       <li><a href="mobile.html">Mobile</a></li>
     </ul>
     <div class="fixed-action-btn">
-      <a class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">cloud</i></a>
+      <a class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal1"><i
+          class="material-icons">add</i></a>
     </div>
     <ul class="collection with-header">
       <li class="collection-header">
-        <h4>First Names</h4>
+        <h4>Mes tâches</h4>
       </li>
       <li class="collection-item">
-        <div>
-          Alvin<a href="#!" class="secondary-content"><i class="material-icons">cloud</i></a>
+        <div>Faire les courses
+          <a href="#!" class="secondary-content"><label>
+            <input type="checkbox" class="filled-in" onclick="moveItemDone(this);" />
+            <span></span>
+          </label>
+          </a>
         </div>
       </li>
-      <li class="collection-item">
-        <div>
-          Alvin<a href="#!" class="secondary-content"><i class="material-icons">cancel</i></a>
-        </div>
-      </li>
-      <li class="collection-item">
-        <div>
-          Alvin<a href="#!" class="secondary-content"><i class="material-icons">cancel</i></a>
-        </div>
-      </li>
-      <li class="collection-item">
-        <div>
-          Alvin<a href="#!" class="secondary-content"><i class="material-icons">cancel</i></a>
+      <li class="collection-item">  
+        <div>Faire les courses
+          <a href="#!" class="secondary-content"><label>
+            <input type="checkbox" class="filled-in" onclick="moveItemDone(this);" />
+            <span></span>
+          </label>
+          </a>
         </div>
       </li>
     </ul>
-    <label>
-      <input type="checkbox" class="filled-in" onclick="moveItemDone(this);" />
-      <span>Enzo je tm</span>
-    </label>
+    <ul class="collection with-header" id="my-done-list" hidden>
+      <li class="collection-header"><b>Mes tâches terminées</b></li>
+    </ul>
 
     <div id="modal1" class="modal">
       <div class="modal-content">
@@ -89,13 +86,16 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-        <i class="material-icons prefix">edit</i>
-        <input id="todo-item" type="text">
+          <i class="material-icons prefix">edit</i>
+          <input id="todo-item" type="text">
         </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-red btn-flat">Annuler</a>
+          <a href="#!" onclick="addItem();" class="modal-close waves-effect waves-green btn-flat">Ajouter</a>
+        </div>
       </div>
-    </div>
+      </div>
   </capacitor-welcome>
 </body>
+
 </html>
