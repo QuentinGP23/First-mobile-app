@@ -1,57 +1,101 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Awesome Capacitor App</title>
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
 
-    <script
-      type="module"
-      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <title>Awesome Capacitor App</title>
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
 
-    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta name="theme-color" content="#31d53d" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/header.js"></script>
-  </head>
-  <body>
-    <capacitor-welcome>
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
-          </ul>
+  <script type="module"
+    src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"></script>
+  <script nomodule
+    src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <meta name="theme-color" content="#31d53d" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/header.js"></script>
+  <script src="./js/modal.js"></script>
+</head>
+
+<body>
+  <capacitor-welcome>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">Javascript</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">Javascript</a></li>
+      <li><a href="mobile.html">Mobile</a></li>
+    </ul>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">cloud</i></a>
+    </div>
+    <ul class="collection with-header">
+      <li class="collection-header">
+        <h4>First Names</h4>
+      </li>
+      <li class="collection-item">
+        <div>
+          Alvin<a href="#!" class="secondary-content"><i class="material-icons">cloud</i></a>
         </div>
-      </nav>
-    
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-      </ul>
-      <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-    </capacitor-welcome>    
-  </body>
+      </li>
+      <li class="collection-item">
+        <div>
+          Alvin<a href="#!" class="secondary-content"><i class="material-icons">cancel</i></a>
+        </div>
+      </li>
+      <li class="collection-item">
+        <div>
+          Alvin<a href="#!" class="secondary-content"><i class="material-icons">cancel</i></a>
+        </div>
+      </li>
+      <li class="collection-item">
+        <div>
+          Alvin<a href="#!" class="secondary-content"><i class="material-icons">cancel</i></a>
+        </div>
+      </li>
+    </ul>
+    <label>
+      <input type="checkbox" class="filled-in" onclick="moveItemDone(this);" />
+      <span>Enzo je tm</span>
+    </label>
+
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+        <i class="material-icons prefix">edit</i>
+        <input id="todo-item" type="text">
+        </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+  </capacitor-welcome>
+</body>
 </html>
